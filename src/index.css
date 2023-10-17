@@ -28,3 +28,21 @@ a.active > button.login {
 a.active > button.register {
   @apply bg-indigo-500;
 }
+
+.gradient-background {
+  background: linear-gradient(320deg, #0f172a, #6366f1, #c4b5fd, #2563eb, #7dd3fc);
+  background-size: 300% 300%;
+  animation: gradient-animation 25s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
