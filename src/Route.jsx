@@ -1,11 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Layout from './Layout';
 import Home from './Components/Pages/Home';
-import Brand from './Components/Pages/Brand';
 import ProductDetails from './Components/ProductDetails/ProductDetails';
 import MyCart from './Components/Pages/MyCart';
 import Login from './Components/Pages/Login';
 import Register from './Components/Pages/Register';
+import AddProducts from './Components/Pages/AddProducts';
 
 const router = createBrowserRouter([
   {
@@ -17,8 +17,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/brand/:name',
-        element: <Brand />,
+        path: '/add-products',
+        element: <AddProducts />,
       },
       {
         path: '/brand/:name/:product_id',
