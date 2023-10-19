@@ -6,6 +6,8 @@ import MyCart from './Components/Pages/MyCart';
 import Login from './Components/Pages/Login';
 import Register from './Components/Pages/Register';
 import AddProducts from './Components/Pages/AddProducts';
+import Products from './Components/Products/Products';
+import AddBrands from './Components/Pages/AddBrands';
 
 const router = createBrowserRouter([
   {
@@ -19,9 +21,18 @@ const router = createBrowserRouter([
       {
         path: '/add-products',
         element: <AddProducts />,
+        loader: () => fetch('https://nokar-shop-server.vercel.app/brands'),
       },
       {
-        path: '/brand/:name/:product_id',
+        path: '/add-brands',
+        element: <AddBrands />,
+      },
+      {
+        path: '/products',
+        element: <Products />,
+      },
+      {
+        path: '/products/:product_id',
         element: <ProductDetails />,
       },
       {
