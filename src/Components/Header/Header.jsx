@@ -1,7 +1,14 @@
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
 import logo from '../../assets/nokarlogo.svg';
 import { NavLink } from 'react-router-dom';
+import { useContext } from 'react';
+import { AuthContext } from '../Providers/AuthProvider';
+import AuthButtons from './AuthButtons';
+import Logout from './Logout';
 const Header = () => {
+  const { loggedUser, loading } = useContext(AuthContext);
+  console.log(loggedUser);
+  console.log(loading);
   return (
     <div className="relative w-full bg-neutral-100">
       <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8 min-h-[80px]">
@@ -40,30 +47,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className="hidden lg:flex lg:gap-x-4">
-          <NavLink
-            className={({ isActive }) => (isActive ? 'active' : '')}
-            to="/login"
-          >
-            <button
-              type="button"
-              className="login rounded-sm border-gray-700 border-2 px-4 py-2 text-lg font-semibold text-gray-700 uppercase transition-all hover:scale-95 hover:bg-gray-700 hover:text-white"
-            >
-              Login
-            </button>
-          </NavLink>
-          <NavLink
-            className={({ isActive }) => (isActive ? 'active' : '')}
-            to="/register"
-          >
-            <button
-              type="button"
-              className="register rounded-sm border-transparent border-2 bg-gray-700 px-4 py-2 text-lg font-semibold text-white uppercase transition-all hover:border-gray-700 hover:text-gray-700 hover:scale-95 hover:bg-transparent"
-            >
-              Register
-            </button>
-          </NavLink>
-        </div>
+        <div className="hidden lg:flex lg:gap-x-4">{!loggedUser ? <AuthButtons /> : <Logout />}</div>
         <div className="lg:hidden">
           <HiOutlineMenuAlt1 />
         </div>
