@@ -1,5 +1,3 @@
-import { BsBoxArrowRight } from 'react-icons/bs';
-import { FcGoogle } from 'react-icons/fc';
 import RegistrationForm from '../Forms/RegistrationForm';
 
 const Register = () => {
