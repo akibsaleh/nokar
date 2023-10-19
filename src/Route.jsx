@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       {
         path: '/add-products',
         element: <AddProducts />,
-        loader: () => fetch('https://nokar-shop-server.vercel.app/brands'),
+        loader: () => fetch('http://localhost:5000/brands/name'),
       },
       {
         path: '/add-brands',

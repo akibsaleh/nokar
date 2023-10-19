@@ -12,7 +12,7 @@ const AddProducts = () => {
   const { register, handleSubmit, reset } = useForm({
     defaultValues: {
       name: '',
-      brand: 'Maserati',
+      brand: '',
       product_image: '',
       type: '',
       price: 0,
@@ -81,6 +81,13 @@ const AddProducts = () => {
               placeholder="Choose a Brand"
               {...register('brand')}
             >
+              <option
+                value=""
+                disabled
+                selected
+              >
+                Choose a Brand
+              </option>
               {brands.map((brand) => (
                 <option
                   key={brand._id}

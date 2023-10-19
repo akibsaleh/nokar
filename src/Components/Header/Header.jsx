@@ -6,9 +6,7 @@ import { AuthContext } from '../Providers/AuthProvider';
 import AuthButtons from './AuthButtons';
 import Logout from './Logout';
 const Header = () => {
-  const { loggedUser, loading } = useContext(AuthContext);
-  console.log(loggedUser);
-  console.log(loading);
+  const { loggedUser } = useContext(AuthContext);
   return (
     <div className="relative w-full bg-neutral-100">
       <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-4 sm:px-6 lg:px-8 min-h-[80px]">

@@ -1,11 +1,13 @@
 import { useContext } from 'react';
 import { BsBoxArrowRight } from 'react-icons/bs';
-import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../Providers/AuthProvider';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
+import GoogleLogIn from '../SharedComponents/GoogleLogIn';
 
 const LoginForm = () => {
+  const navigate = useNavigate();
   const { handleSignIn } = useContext(AuthContext);
   const { register, handleSubmit } = useForm({
     defaultValues: {
@@ -16,7 +18,10 @@ const LoginForm = () => {
   const handleOnSubmit = (data) => {
     const { email, password } = data;
     handleSignIn(email, password)
-      .then(() => toast.success('Logged in successfully'))
+      .then(() => {
+        toast.success('Logged in successfully');
+        navigate('/');
+      })
       .catch(() => toast.error('Failed to Log in'));
   };
   return (
@@ -66,13 +71,7 @@ const LoginForm = () => {
           >
             Login <BsBoxArrowRight />
           </button>
-          <button
-            className="rounded-sm border-gray-700 border-2 px-4 py-3 font-semibold text-gray-700 transition-all hover:scale-95 hover:bg-gray-700 hover:text-white flex items-center justify-center gap-x-2"
-            type="submit"
-          >
-            <FcGoogle className="text-xl" />
-            Log in with Google
-          </button>
+          <GoogleLogIn />
         </div>
       </form>
     </>

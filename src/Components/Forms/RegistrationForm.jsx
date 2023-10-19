@@ -1,11 +1,13 @@
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { BsBoxArrowRight } from 'react-icons/bs';
-import { FcGoogle } from 'react-icons/fc';
 import { AuthContext } from '../Providers/AuthProvider';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
+import GoogleLogIn from '../SharedComponents/GoogleLogIn';
 
 const RegistrationForm = () => {
+  const navigate = useNavigate();
   const { handleRegistration, profileUpdate } = useContext(AuthContext);
   const { register, handleSubmit } = useForm({
     defaultValues: {
@@ -23,6 +25,7 @@ const RegistrationForm = () => {
       .then(() => {
         profileUpdate(name, photo).then(() => {
           toast.success('Successfully Registered');
+          navigate('/');
         });
       })
       .catch((err) => {
@@ -108,13 +111,7 @@ const RegistrationForm = () => {
           >
             Register <BsBoxArrowRight />
           </button>
-          <button
-            className="rounded-sm border-gray-700 border-2 px-4 py-3 font-semibold text-gray-700 transition-all hover:scale-95 hover:bg-gray-700 hover:text-white flex items-center justify-center gap-x-2"
-            type="submit"
-          >
-            <FcGoogle className="text-xl" />
-            Log in with Google
-          </button>
+          <GoogleLogIn />
         </div>
       </form>
     </>
