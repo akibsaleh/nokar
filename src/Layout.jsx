@@ -10,6 +10,11 @@ const Layout = () => {
       <Toaster
         position="bottom-right"
         reverseOrder={false}
+        gutter={20}
+        toastOptions={{
+          className: '!bg-gray-900 !text-white !px-8 !py-5 !leading-tight',
+          duration: 5000,
+        }}
       />
       <Header />
       <Outlet />

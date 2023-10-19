@@ -31,20 +31,8 @@ const AddProducts = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.insertedId)
-          toast.success('Product Added Successfully', {
-            style: {
-              background: '#0a0a0a',
-              color: '#fff',
-            },
-          });
-        else
-          toast.error('Something Went Wrong', {
-            style: {
-              background: '#0a0a0a',
-              color: '#fff',
-            },
-          });
+        if (data.insertedId) toast.success('Product Added Successfully');
+        else toast.error('Something Went Wrong');
       });
     reset();
   };

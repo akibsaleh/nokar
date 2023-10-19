@@ -1,14 +1,46 @@
+import { useContext } from 'react';
+import { useForm } from 'react-hook-form';
 import { BsBoxArrowRight } from 'react-icons/bs';
 import { FcGoogle } from 'react-icons/fc';
+import { AuthContext } from '../Providers/AuthProvider';
+import toast from 'react-hot-toast';
 
 const RegistrationForm = () => {
+  const { handleRegistration, profileUpdate } = useContext(AuthContext);
+  const { register, handleSubmit } = useForm({
+    defaultValues: {
+      name: '',
+      photo: '',
+      email: '',
+      password: '',
+    },
+  });
+
+  const handleOnSubmit = (data) => {
+    const { name, photo, email, password } = data;
+
+    handleRegistration(email, password)
+      .then(() => {
+        profileUpdate(name, photo).then(() => {
+          toast.success('Successfully Registered');
+        });
+      })
+      .catch((err) => {
+        console.log(err.message);
+        toast.error(`Registration Failed, try again ${err.message}`);
+      });
+  };
+
   return (
     <>
       <div className="text-center max-w-lg w-full">
         <h2 className="text-4xl font-bold mb-2 text-gray-800">Register Here</h2>
         <p className="text-lg text-gray-700">Fill up the form below and register to Nokar</p>
       </div>
-      <form className="flex flex-col max-w-lg w-full p-10 my-5 bg-gray-50 border border-gray-100 rounded-sm gap-y-5">
+      <form
+        onSubmit={handleSubmit(handleOnSubmit)}
+        className="flex flex-col max-w-lg w-full p-10 my-5 bg-gray-50 border border-gray-100 rounded-sm gap-y-5"
+      >
         <div className="flex justify-center items-start gap-y-3 w-full drop-shadow-sm">
           <label
             htmlFor="full-name"
@@ -21,6 +53,7 @@ const RegistrationForm = () => {
             id="full-name"
             className="w-full px-4 py-3 rounded-e-md border border-gray-200"
             placeholder="Enter your name"
+            {...register('name')}
           />
         </div>
         <div className="flex justify-center items-start gap-y-3 w-full drop-shadow-sm">
@@ -35,6 +68,7 @@ const RegistrationForm = () => {
             id="profile-photo"
             className="w-full px-4 py-3 rounded-e-md border border-gray-200"
             placeholder="Enter image URL of display photo"
+            {...register('photo')}
           />
         </div>
         <div className="flex justify-center items-start gap-y-3 w-full drop-shadow-sm">
@@ -49,6 +83,7 @@ const RegistrationForm = () => {
             id="email"
             className="w-full px-4 py-3 rounded-e-md border border-gray-200"
             placeholder="Enter your email"
+            {...register('email')}
           />
         </div>
         <div className="flex justify-center items-start gap-y-3 w-full drop-shadow-sm">
@@ -63,6 +98,7 @@ const RegistrationForm = () => {
             id="password"
             className="w-full px-4 py-3 rounded-e-md border border-gray-200"
             placeholder="Enter Password"
+            {...register('password')}
           />
         </div>
         <div className="flex flex-col justify-center my-5 gap-y-4">

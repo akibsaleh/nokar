@@ -22,20 +22,8 @@ const AddBrands = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.insertedId)
-          toast.success('Brand Added Successfully', {
-            style: {
-              background: '#0a0a0a',
-              color: '#fff',
-            },
-          });
-        else
-          toast.error('Failed to add brand', {
-            style: {
-              background: '#0a0a0a',
-              color: '#fff',
-            },
-          });
+        if (data.insertedId) toast.success('Brand Added Successfully');
+        else toast.error('Failed to add brand');
       });
   };
 
