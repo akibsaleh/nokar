@@ -15,7 +15,7 @@ const BrandProducts = () => {
   console.log(products);
 
   useEffect(() => {
-    fetch(`https://nokar-shop-server.vercel.app//brands/${brand_name}`)
+    fetch(`https://nokar-shop-server.vercel.app/brands/${brand_name}`)
       .then((res) => res.json())
       .then((data) => setBrand(data[0]));
   }, [brand_name]);

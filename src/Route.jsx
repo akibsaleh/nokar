@@ -39,8 +39,9 @@ const router = createBrowserRouter([
         element: <Products />,
       },
       {
-        path: '/product/:product_id',
+        path: '/product/:id',
         element: <ProductDetails />,
+        loader: ({ params }) => fetch(`https://nokar-shop-server.vercel.app/product/${params.id}`),
       },
       {
         path: 'my-cart',
