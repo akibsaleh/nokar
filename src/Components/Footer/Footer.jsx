@@ -6,7 +6,7 @@ import { FaInstagram } from 'react-icons/fa6';
 
 const Footer = () => {
   return (
-    <div className="bg-gray-700 py-5 mx-auto flex max-w-8xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <div className="bg-gray-950 py-5 mx-auto flex max-w-8xl items-center justify-between px-4 sm:px-6 lg:px-8">
       <div>
         <img
           src={logoLight}

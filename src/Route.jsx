@@ -17,11 +17,12 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home />,
+        loader: () => fetch('http://localhost:5000/brands/thumb'),
       },
       {
         path: '/add-products',
         element: <AddProducts />,
-        loader: () => fetch('http://localhost:5000/brands/name'),
+        loader: () => fetch('https://nokar-shop-server.vercel.app/brands/name'),
       },
       {
         path: '/add-brands',
