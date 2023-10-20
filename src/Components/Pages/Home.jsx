@@ -37,19 +37,19 @@ const Home = () => {
           <p className="text-lg text-gray-700">Check out our brands that represent automotive excellence</p>
         </div>
         <div className="grid grid-cols-3 gap-6">
-          {data.map((item) => (
+          {data?.map((item) => (
             <Link
-              key={item._id}
-              to={`/brand/${item.name}`}
+              key={item?._id}
+              to={`/products/${item?.name.toLowerCase()}`}
             >
               <div className="flex flex-col w-full relative duration-300 hover:opacity-90 hover:scale-95">
                 <img
-                  src={item.thumb}
-                  alt={item.name}
+                  src={item?.thumb}
+                  alt={item?.name}
                   className="w-full block object-cover h-full"
                 />
                 <p className="pb-10 pt-20 bg-gradient-to-t from-gray-900 via-gray-800/75 via-gray-700/50 via-gray-600/10 to-transparent uppercase tracking-wider  text-center absolute bottom-0 text-white text-3xl font-bold w-full">
-                  {item.name}
+                  {item?.name}
                 </p>
               </div>
             </Link>

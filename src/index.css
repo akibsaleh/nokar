@@ -19,9 +19,7 @@
   overflow: hidden;
 }
 
-.rotate-x-180 {
-  transform: rotateX('180deg');
-}
+
 a.active > span {
   @apply border-indigo-500;
   @apply text-indigo-500;

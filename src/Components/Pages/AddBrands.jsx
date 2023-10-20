@@ -12,13 +12,16 @@ const AddBrands = () => {
     },
   });
 
-  const handleOnSubmit = (data) => {
+  const handleOnSubmit = ({ name, thumb, banner1, banner2, banner3 }) => {
+    const updatedName = name.toLowerCase();
+    const updatedData = { name: updatedName, thumb, banner1, banner2, banner3 };
+
     fetch('https://nokar-shop-server.vercel.app/brands', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(updatedData),
     })
       .then((res) => res.json())
       .then((data) => {
