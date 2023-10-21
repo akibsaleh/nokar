@@ -1,9 +1,13 @@
-# React + Vite
+# Nokar Car Brand Shop Assignment Submission by Akib Saleh
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Feature
 
-Currently, two official plugins are available:
+- Visitors will be able to browse all brands that Nokar Offer.
+- Visitors will be able to register using email and password
+- Visitors will be able to login using email and password
+- Visitors will be able to login using Google
+- Visitors will be able to Add to cart cars and see them in MyCart page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# b8a10-brandshop-client-side-akibsaleh
+### Visit the Client live [Link to the Client](https://nokar-akib-saleh.web.app)
+
+### Visit the Server live [Link to the Server](https://nokar-shop-server.vercel.app/)
