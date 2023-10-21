@@ -19,7 +19,7 @@ const Testimonial = () => {
         slidesPerView={'auto'}
         coverflowEffect={{ rotate: 0, stretch: 0, depth: 75, modifier: 2.5 }}
         modules={[EffectCoverflow, Navigation]}
-        className={'max-w-2xl w-full !overflow-visible'}
+        className={'max-w-sm lg:max-w-2xl w-full !overflow-visible'}
         navigation={{
           nextEl: '.swiper-btn-next',
           prevEl: '.swiper-btn-prev',
@@ -27,9 +27,9 @@ const Testimonial = () => {
         }}
       >
         <SwiperSlide>
-          <div className="max-w-2xl bg-gray-900 text-white p-10 pt-24 rounded-sm relative flex flex-col items-center">
+          <div className="max-w-sm lg:max-w-2xl bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 p-10 pt-24 rounded-sm relative flex flex-col items-center">
             <BiSolidQuoteAltLeft className="text-7xl text-gray-600 absolute top-3 left-3" />
-            <p className="text-center text-gray-400 leading-7">
+            <p className="text-center text-gray-400 dark:text-gray-900 leading-7">
               I was really impressed with the customer service at Nokar. My salesperson was very knowledgeable and helpful, and they made sure to answer all of my questions. I also felt like I got a
               great deal on my car. I would definitely recommend Nokar to anyone looking for a new car.
             </p>
@@ -39,7 +39,7 @@ const Testimonial = () => {
                 alt=""
                 className="rounded-full w-16 h-16 "
               />
-              <div className="text-left text-gray-400 ">
+              <div className="text-left text-gray-400 dark:text-gray-900 ">
                 <p>Sarah Jones</p>
                 <p>Software Engineer</p>
               </div>
@@ -49,9 +49,9 @@ const Testimonial = () => {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="max-w-2xl bg-gray-900 text-white p-10 pt-24 rounded-sm relative flex flex-col items-center">
+          <div className="max-w-sm lg:max-w-2xl bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 p-10 pt-24 rounded-sm relative flex flex-col items-center">
             <BiSolidQuoteAltLeft className="text-7xl text-gray-600 absolute top-3 left-3" />
-            <p className="text-center text-gray-400 leading-7">
+            <p className="text-center text-gray-400 dark:text-gray-900 leading-7">
               I was really impressed with the customer service at Nokar. My salesperson was very knowledgeable and helpful, and they made sure to answer all of my questions. I also felt like I got a
               great deal on my car. I would definitely recommend Nokar to anyone looking for a new car.
             </p>
@@ -61,7 +61,7 @@ const Testimonial = () => {
                 alt=""
                 className="rounded-full w-16 h-16 "
               />
-              <div className="text-left text-gray-400 ">
+              <div className="text-left text-gray-400 dark:text-gray-900 ">
                 <p>Sarah Jones</p>
                 <p>Software Engineer</p>
               </div>
@@ -71,9 +71,9 @@ const Testimonial = () => {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="max-w-2xl bg-gray-900 text-white p-10 pt-24 rounded-sm relative flex flex-col items-center">
+          <div className="max-w-sm lg:max-w-2xl bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 p-10 pt-24 rounded-sm relative flex flex-col items-center">
             <BiSolidQuoteAltLeft className="text-7xl text-gray-600 absolute top-3 left-3" />
-            <p className="text-center text-gray-400 leading-7">
+            <p className="text-center text-gray-400 dark:text-gray-900 leading-7">
               I was really impressed with the customer service at Nokar. My salesperson was very knowledgeable and helpful, and they made sure to answer all of my questions. I also felt like I got a
               great deal on my car. I would definitely recommend Nokar to anyone looking for a new car.
             </p>
@@ -83,7 +83,7 @@ const Testimonial = () => {
                 alt=""
                 className="rounded-full w-16 h-16 "
               />
-              <div className="text-left text-gray-400 ">
+              <div className="text-left text-gray-400 dark:text-gray-900 ">
                 <p>Sarah Jones</p>
                 <p>Software Engineer</p>
               </div>
@@ -93,9 +93,9 @@ const Testimonial = () => {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="max-w-2xl bg-gray-900 text-white p-10 pt-24 rounded-sm relative flex flex-col items-center">
+          <div className="max-w-sm lg:max-w-2xl bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 p-10 pt-24 rounded-sm relative flex flex-col items-center">
             <BiSolidQuoteAltLeft className="text-7xl text-gray-600 absolute top-3 left-3" />
-            <p className="text-center text-gray-400 leading-7">
+            <p className="text-center text-gray-400 dark:text-gray-900 leading-7">
               I was really impressed with the customer service at Nokar. My salesperson was very knowledgeable and helpful, and they made sure to answer all of my questions. I also felt like I got a
               great deal on my car. I would definitely recommend Nokar to anyone looking for a new car.
             </p>
@@ -105,7 +105,7 @@ const Testimonial = () => {
                 alt=""
                 className="rounded-full w-16 h-16 "
               />
-              <div className="text-left text-gray-400 ">
+              <div className="text-left text-gray-400 dark:text-gray-900 ">
                 <p>Sarah Jones</p>
                 <p>Software Engineer</p>
               </div>
@@ -115,9 +115,9 @@ const Testimonial = () => {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="max-w-2xl bg-gray-900 text-white p-10 pt-24 rounded-sm relative flex flex-col items-center">
+          <div className="max-w-sm lg:max-w-2xl bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 p-10 pt-24 rounded-sm relative flex flex-col items-center">
             <BiSolidQuoteAltLeft className="text-7xl text-gray-600 absolute top-3 left-3" />
-            <p className="text-center text-gray-400 leading-7">
+            <p className="text-center text-gray-400 dark:text-gray-900 leading-7">
               I was really impressed with the customer service at Nokar. My salesperson was very knowledgeable and helpful, and they made sure to answer all of my questions. I also felt like I got a
               great deal on my car. I would definitely recommend Nokar to anyone looking for a new car.
             </p>
@@ -127,7 +127,7 @@ const Testimonial = () => {
                 alt=""
                 className="rounded-full w-16 h-16 "
               />
-              <div className="text-left text-gray-400 ">
+              <div className="text-left text-gray-400 dark:text-gray-900 ">
                 <p>Sarah Jones</p>
                 <p>Software Engineer</p>
               </div>
@@ -137,9 +137,9 @@ const Testimonial = () => {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="max-w-2xl bg-gray-900 text-white p-10 pt-24 rounded-sm relative flex flex-col items-center">
+          <div className="max-w-sm lg:max-w-2xl bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 p-10 pt-24 rounded-sm relative flex flex-col items-center">
             <BiSolidQuoteAltLeft className="text-7xl text-gray-600 absolute top-3 left-3" />
-            <p className="text-center text-gray-400 leading-7">
+            <p className="text-center text-gray-400 dark:text-gray-900 leading-7">
               I was really impressed with the customer service at Nokar. My salesperson was very knowledgeable and helpful, and they made sure to answer all of my questions. I also felt like I got a
               great deal on my car. I would definitely recommend Nokar to anyone looking for a new car.
             </p>
@@ -149,7 +149,7 @@ const Testimonial = () => {
                 alt=""
                 className="rounded-full w-16 h-16 "
               />
-              <div className="text-left text-gray-400 ">
+              <div className="text-left text-gray-400 dark:text-gray-900 ">
                 <p>Sarah Jones</p>
                 <p>Software Engineer</p>
               </div>
@@ -159,9 +159,9 @@ const Testimonial = () => {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="max-w-2xl bg-gray-900 text-white p-10 pt-24 rounded-sm relative flex flex-col items-center">
+          <div className="max-w-sm lg:max-w-2xl bg-gray-900 dark:bg-gray-200 text-white dark:text-gray-900 p-10 pt-24 rounded-sm relative flex flex-col items-center">
             <BiSolidQuoteAltLeft className="text-7xl text-gray-600 absolute top-3 left-3" />
-            <p className="text-center text-gray-400 leading-7">
+            <p className="text-center text-gray-400 dark:text-gray-900 leading-7">
               I was really impressed with the customer service at Nokar. My salesperson was very knowledgeable and helpful, and they made sure to answer all of my questions. I also felt like I got a
               great deal on my car. I would definitely recommend Nokar to anyone looking for a new car.
             </p>
@@ -171,7 +171,7 @@ const Testimonial = () => {
                 alt=""
                 className="rounded-full w-16 h-16 "
               />
-              <div className="text-left text-gray-400 ">
+              <div className="text-left text-gray-400 dark:text-gray-900 ">
                 <p>Sarah Jones</p>
                 <p>Software Engineer</p>
               </div>
@@ -182,10 +182,10 @@ const Testimonial = () => {
 
         <div className="slider-controler flex justify-center gap-x-5 mt-10">
           <div className="swiper-btn-prev">
-            <PiArrowCircleLeftLight className="text-5xl text-gray-400" />
+            <PiArrowCircleLeftLight className="text-5xl text-gray-400 dark:text-gray-900" />
           </div>
           <div className="swiper-btn-next">
-            <PiArrowCircleRightLight className="text-5xl text-gray-400" />
+            <PiArrowCircleRightLight className="text-5xl text-gray-400 dark:text-gray-900" />
           </div>
           <div className="swiper-pagination"></div>
         </div>

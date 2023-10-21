@@ -30,15 +30,15 @@ const ProductDetails = () => {
 
   return (
     <div className="flex flex-col justify-start items-center max-w-1440 py-10 mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="flex w-full gap-16">
-        <div className="w-1/2">
+      <div className="flex flex-col lg:flex-row w-full gap-16">
+        <div className="w-full lg:w-1/2">
           <img
             src={product?.product_image}
             alt={product?.name}
             className="w-full object-cover"
           />
         </div>
-        <div className="w-1/2 flex flex-col gap-y-3 justify-center">
+        <div className="w-full lg:w-1/2 flex flex-col gap-y-3 justify-center">
           <p className="uppercase text-sm font-bold text-gray-500 m-0 p-0">{product?.brand}</p>
           <p className="text-4xl font-bold">{product?.name}</p>
           <p className="flex pb-5">
@@ -63,7 +63,7 @@ const ProductDetails = () => {
           <p className="space-x-3">
             <span className="font-semibold">Type</span>:<span>{product?.type}</span>
           </p>
-          <div className="mt-10 flex items-center justify-star gap-x-10">
+          <div className="mt-10 flex flex-col lg:flex-row items-center justify-star gap-x-10 gap-y-5">
             <p className="text-4xl font-semibold flex gap-x-2">
               <BiSolidDollarCircle className="text-yellow-500 text-5xl" />
               <span className="py-1">{product?.price}</span>

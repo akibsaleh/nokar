@@ -11,7 +11,7 @@ const Logout = () => {
   };
   return (
     <>
-      <div className="bg-gray-200 h-12 flex justify-center items-center rounded-sm">
+      <div className="hidden bg-gray-200 h-12 lg:flex justify-center items-center rounded-sm">
         <img
           src={loggedUser?.photoURL}
           className="w-12 h-12 object-cover rounded-s-sm"
@@ -21,7 +21,7 @@ const Logout = () => {
       </div>
       <button
         onClick={handleButton}
-        className="rounded-sm border-gray-700 border-2 px-4 py-2 text-lg font-semibold text-gray-700 uppercase transition-all hover:scale-95 hover:bg-gray-700 hover:text-white"
+        className="hidden lg:block rounded-sm border-gray-700 dark:border-gray-100 border-2 px-4 py-2 text-lg font-semibold text-gray-700 dark:text-gray-100 uppercase transition-all hover:scale-95 hover:bg-gray-700 hover:text-white"
       >
         Log Out
       </button>

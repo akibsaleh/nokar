@@ -11,8 +11,8 @@ const ProductCard = ({ product }) => {
         src={product_image}
         className="w-full rounded-sm shadow-md"
       />
-      <div className="px-8 py-6 bg-gray-950 w-[90%] -mt-24 rounded-sm flex justify-between items-center">
-        <div className="text-white flex flex-col gap-y-3 shadow-xl">
+      <div className="px-8 py-6 bg-gray-950 w-full lg:w-[90%] lg:-mt-24 rounded-sm flex flex-col lg:flex-row justify-between items-center">
+        <div className="text-white flex flex-col gap-y-3 shadow-xl text-center lg:text-left">
           <p className="text-xl font-semibold flex gap-3">
             <span>{name}</span>
             <span className="inline-flex items-center gap-1">
@@ -23,7 +23,7 @@ const ProductCard = ({ product }) => {
           <p className="font-medium capitalize">Brand: {brand}</p>
           <p className="font-medium">Type: {type}</p>
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex lg:flex-col gap-4 pt-4 lg:pt-0">
           <Link to={`/product/${_id}`}>
             <button className="px-4 py-3 w-full bg-green-700 text-white flex justify-center items-center rounded-sm">
               Details <RiArrowRightSFill />

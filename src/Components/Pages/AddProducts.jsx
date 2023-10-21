@@ -35,6 +35,7 @@ const AddProducts = () => {
         else toast.error('Something Went Wrong');
       });
     reset();
+    setRating(0);
   };
 
   return (
@@ -60,7 +61,7 @@ const AddProducts = () => {
               id="name"
               placeholder="Enter Product Name"
               className="w-full py-3 px-4 mt-2 border rounded-sm shadow-sm"
-              {...register('name')}
+              {...register('name', { required: true })}
             />
           </div>
           <div id="brandBox">
@@ -79,7 +80,7 @@ const AddProducts = () => {
             <select
               className="w-full py-3 px-4 mt-2 border rounded-sm shadow-sm"
               placeholder="Choose a Brand"
-              {...register('brand')}
+              {...register('brand', { required: true })}
             >
               <option
                 value=""
@@ -114,7 +115,7 @@ const AddProducts = () => {
               id="product_image"
               placeholder="Enter Image Link"
               className="w-full py-3 px-4 mt-2 border rounded-sm shadow-sm"
-              {...register('product_image')}
+              {...register('product_image', { required: true })}
             />
           </div>
           <div id="typeBox">
@@ -129,7 +130,7 @@ const AddProducts = () => {
               id="type"
               placeholder="Enter Car Type"
               className="w-full py-3 px-4 mt-2 border rounded-sm shadow-sm"
-              {...register('type')}
+              {...register('type', { required: true })}
             />
           </div>
           <div id="Price">
@@ -144,7 +145,7 @@ const AddProducts = () => {
               id="price"
               placeholder="Enter Price"
               className="w-full py-3 px-4 mt-2 border rounded-sm shadow-sm"
-              {...register('price')}
+              {...register('price', { required: true })}
             />
           </div>
           <div
@@ -161,7 +162,7 @@ const AddProducts = () => {
               id="desc"
               className="w-full py-3 px-4 mt-2 border rounded-sm shadow-sm"
               rows={4}
-              {...register('description')}
+              {...register('description', { required: true })}
             />
           </div>
           <div

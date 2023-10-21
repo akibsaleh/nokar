@@ -6,11 +6,12 @@ import toast from 'react-hot-toast';
 import { useEffect } from 'react';
 
 const UpdateProducts = () => {
-  const [newRating, setNewRating] = useState(0);
+  const [newRating, setNewRating] = useState();
   const [brandList, setBrandList] = useState(null);
 
   const { brand, description, name, price, product_image, rating, type, _id } = useLoaderData();
 
+  console.log(rating);
   const { register, handleSubmit, reset } = useForm({
     defaultValues: {
       name: name,
@@ -30,6 +31,7 @@ const UpdateProducts = () => {
   }, []);
 
   const handleOnSubmit = (data) => {
+    const updatedRating = data.rating;
     fetch(`https://nokar-shop-server.vercel.app/product/${_id}`, {
       method: 'PUT',
       headers: {
@@ -39,7 +41,9 @@ const UpdateProducts = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.insertedId) toast.success('Product Updated Successfully');
+        setNewRating(updatedRating);
+        console.log(data);
+        if (data.modifiedCount > 0) toast.success('Product Updated Successfully');
         else toast.error('Something Went Wrong');
       });
     reset();

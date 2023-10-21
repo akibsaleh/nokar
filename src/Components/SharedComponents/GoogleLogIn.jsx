@@ -24,7 +24,7 @@ const GoogleLogIn = () => {
     <>
       <button
         onClick={handleGoogleAuth}
-        className="rounded-sm border-gray-700 border-2 px-4 py-3 font-semibold text-gray-700 transition-all hover:scale-95 hover:bg-gray-700 hover:text-white flex items-center justify-center gap-x-2"
+        className="rounded-sm border-gray-700 border-2 px-4 py-3 font-semibold text-gray-700 dark:text-gray-100 transition-all hover:scale-95 hover:bg-gray-700 hover:text-white flex items-center justify-center gap-x-2"
         type="button"
       >
         <FcGoogle className="text-xl" />
