@@ -14,7 +14,7 @@ const ProductDetails = () => {
     const { name, price, product_image } = product;
     console.log('Product added to cart', { uid, name, price, product_image });
 
-    fetch('http://localhost:5000/cart', {
+    fetch('https://nokar-shop-server.vercel.app/cart', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
