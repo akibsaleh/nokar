@@ -17,7 +17,9 @@ const Layout = () => {
         }}
       />
       <Header />
-      <Outlet />
+      <main className="w-full min-h-[85vh]">
+        <Outlet />
+      </main>
       <Footer />
       <AuthProvider />
     </>

@@ -9,6 +9,7 @@ import AddProducts from './Components/Pages/AddProducts';
 import Products from './Components/Products/Products';
 import AddBrands from './Components/Pages/AddBrands';
 import BrandProducts from './Components/BrandProducts/BrandProducts';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -22,30 +23,54 @@ const router = createBrowserRouter([
       },
       {
         path: '/add-products',
-        element: <AddProducts />,
+        element: (
+          <PrivateRoute>
+            <AddProducts />
+          </PrivateRoute>
+        ),
         loader: () => fetch('https://nokar-shop-server.vercel.app/brands-name'),
       },
       {
         path: '/add-brands',
-        element: <AddBrands />,
+        element: (
+          <PrivateRoute>
+            <AddBrands />
+          </PrivateRoute>
+        ),
       },
       {
         path: '/products/:brand_name',
-        element: <BrandProducts />,
+        element: (
+          <PrivateRoute>
+            <BrandProducts />
+          </PrivateRoute>
+        ),
         loader: ({ params }) => fetch(`https://nokar-shop-server.vercel.app/products/${params.brand_name}`),
       },
       {
         path: '/products',
-        element: <Products />,
+        element: (
+          <PrivateRoute>
+            <Products />
+          </PrivateRoute>
+        ),
       },
       {
         path: '/product/:id',
-        element: <ProductDetails />,
+        element: (
+          <PrivateRoute>
+            <ProductDetails />
+          </PrivateRoute>
+        ),
         loader: ({ params }) => fetch(`https://nokar-shop-server.vercel.app/product/${params.id}`),
       },
       {
         path: 'my-cart',
-        element: <MyCart />,
+        element: (
+          <PrivateRoute>
+            <MyCart />
+          </PrivateRoute>
+        ),
       },
       {
         path: 'login',

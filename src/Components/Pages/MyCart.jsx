@@ -4,6 +4,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../Firebase/firebase.init';
 import { RiDeleteBin2Fill } from 'react-icons/ri';
 import toast from 'react-hot-toast';
+import AnotherLoader from '../CustomLoader/AnotherLoader';
 
 const MyCart = () => {
   const [uid, setuid] = useState(null);
@@ -25,9 +26,7 @@ const MyCart = () => {
   }, [cart, uid]);
 
   const handleDelete = (id) => {
-    console.log(id);
-
-    fetch(`https://nokar-shop-server.vercel.app/${id}`, {
+    fetch(`https://nokar-shop-server.vercel.app/cart/${id}`, {
       method: 'DELETE',
     })
       .then((res) => res.json())
@@ -81,7 +80,7 @@ const MyCart = () => {
       </div>
     );
   } else {
-    return <div>Your Cart is Empty</div>;
+    return <AnotherLoader></AnotherLoader>;
   }
 };
 

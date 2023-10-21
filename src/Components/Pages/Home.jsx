@@ -10,7 +10,7 @@ AOS.init();
 const Home = () => {
   const data = useLoaderData();
   return (
-    <main>
+    <div>
       <div className="flex flex-grow">
         <div
           className="text-center w-full min-h-[90vh] bg-cover bg-no-repeat bg-center flex flex-col"
@@ -179,7 +179,7 @@ const Home = () => {
           />
         </Marquee>
       </div>
-    </main>
+    </div>
   );
 };
 
