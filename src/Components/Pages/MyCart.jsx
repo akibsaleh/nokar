@@ -11,11 +11,13 @@ const MyCart = () => {
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
-      if (user) {
+      if (user.uid) {
         setuid(user.uid);
-        fetch(`https://nokar-shop-server.vercel.app/${uid}`)
+        fetch(`https://nokar-shop-server.vercel.app/cart/${uid}`)
           .then((res) => res.json())
           .then((data) => setCart(data));
+      } else {
+        setuid(null);
       }
     });
   }, [uid]);
@@ -37,7 +39,7 @@ const MyCart = () => {
       });
   };
 
-  if (cart) {
+  if (cart.length > 0) {
     return (
       <div className="flex flex-col justify-start items-center max-w-8xl py-10 mx-auto min-h-screen px-4 sm:px-6 lg:px-8 gap-y-5">
         <div className="text-center py-10 mb-5">
