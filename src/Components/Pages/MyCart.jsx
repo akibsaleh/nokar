@@ -42,7 +42,7 @@ const MyCart = () => {
 
   if (cart) {
     return (
-      <div className="flex flex-col justify-start items-center max-w-8xl py-10 mx-auto min-h-screen px-4 sm:px-6 lg:px-8 gap-y-5">
+      <div className="flex flex-col justify-start items-center max-w-1440 min-h-[80vh] w-full py-10 mx-auto px-4 sm:px-6 lg:px-8 gap-y-5">
         <div className="text-center py-10 mb-5">
           <h2 className="text-4xl font-bold mb-2 text-gray-800">My Cart</h2>
           <p className="text-lg text-gray-700">Here is the list of all the products you have added to cart</p>

@@ -12,14 +12,15 @@ const Home = () => {
   return (
     <div>
       <div className="flex flex-grow">
-        <div
-          className="text-center w-full min-h-[90vh] bg-cover bg-no-repeat bg-center flex flex-col"
-          style={{ backgroundImage: "url('https://i.ibb.co/d2ncGFH/hero-Banner.webp')" }}
-        >
+        <div className="text-center w-full min-h-[640px] flex flex-col relative bg-black">
+          <img
+            src="https://i.ibb.co/1RbcsK3/hero-Banner-slim.webp"
+            className="w-full h-full absolute inset-0 object-contain z-0"
+          />
           <h1
             className="text-5xl leading-tight uppercase font-extrabold bg-gradient-to-r bg-clip-text  text-transparent 
             from-slate-900 via-white to-indigo-900
-            animate-text pt-[5vw] pb-2"
+            animate-text pt-[5vw] pb-2 z-10"
           >
             Experience the
             <br />
@@ -31,7 +32,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center max-w-8xl py-10 mx-auto min-h-screen px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col justify-center items-center max-w-1440 py-10 mx-auto min-h-screen px-4 sm:px-6 lg:px-8">
         <div className="text-center py-10">
           <h2 className="text-6xl font-extralight uppercase mb-2  text-gray-800">Our Brands</h2>
           <p className="text-lg text-gray-700">Check out our brands that represent automotive excellence</p>

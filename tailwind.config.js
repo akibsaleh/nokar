@@ -3,6 +3,9 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      maxWidth: {
+        1440: '1440px',
+      },
       animation: {
         text: 'text 5s ease infinite',
         'bounce-slow': 'bounce 2s linear infinite',

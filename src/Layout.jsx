@@ -17,7 +17,7 @@ const Layout = () => {
         }}
       />
       <Header />
-      <main className="w-full min-h-[85vh]">
+      <main className="w-full min-h-[85vh] flex flex-col justify-center items-center">
         <Outlet />
       </main>
       <Footer />

@@ -29,7 +29,7 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="flex flex-col justify-start items-center max-w-8xl py-10 mx-auto min-h-screen px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col justify-start items-center max-w-1440 py-10 mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex w-full gap-16">
         <div className="w-1/2">
           <img

@@ -31,7 +31,7 @@ const AddBrands = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center max-w-8xl py-10 mx-auto min-h-screen px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col justify-center items-center max-w-1440 py-10 mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center">
         <h2 className="text-4xl font-bold mb-2 text-gray-800">Add Brands</h2>
         <p className="text-lg text-gray-700">Fill up the form below to add a brand</p>

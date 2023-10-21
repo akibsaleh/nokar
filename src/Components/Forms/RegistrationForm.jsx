@@ -42,7 +42,7 @@ const RegistrationForm = () => {
       </div>
       <form
         onSubmit={handleSubmit(handleOnSubmit)}
-        className="flex flex-col max-w-lg w-full p-10 my-5 bg-gray-50 border border-gray-100 rounded-sm gap-y-5"
+        className="flex flex-col max-w-lg w-full pt-10 my-5 bg-gray-50 border border-gray-100 rounded-sm gap-y-5"
       >
         <div className="flex justify-center items-start gap-y-3 w-full drop-shadow-sm">
           <label

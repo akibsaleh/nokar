@@ -10,6 +10,7 @@ import Products from './Components/Products/Products';
 import AddBrands from './Components/Pages/AddBrands';
 import BrandProducts from './Components/BrandProducts/BrandProducts';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import UpdateProducts from './Components/Pages/UpdateProduct';
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,15 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <ProductDetails />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) => fetch(`https://nokar-shop-server.vercel.app/product/${params.id}`),
+      },
+      {
+        path: '/update/:id',
+        element: (
+          <PrivateRoute>
+            <UpdateProducts />
           </PrivateRoute>
         ),
         loader: ({ params }) => fetch(`https://nokar-shop-server.vercel.app/product/${params.id}`),
