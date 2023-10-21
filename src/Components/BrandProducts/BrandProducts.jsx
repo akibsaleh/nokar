@@ -12,7 +12,6 @@ const BrandProducts = () => {
   const [brand, setBrand] = useState(null);
   const { brand_name } = useParams();
   const products = useLoaderData();
-  console.log(products);
 
   useEffect(() => {
     fetch(`https://nokar-shop-server.vercel.app/brands/${brand_name}`)

@@ -38,9 +38,9 @@ const Header = () => {
             <li className="`text-lg uppercase font-semibold text-gray-800 hover:text-gray-500`">
               <NavLink
                 className={({ isActive }) => (isActive ? 'active' : '')}
-                to="/products"
+                to="/my-cart"
               >
-                <span className="py-3 border-y-2 border-transparent transition-all duration-300 hover:border-indigo-500 hover:py-2 ">Cars</span>
+                <span className="py-3 border-y-2 border-transparent transition-all duration-300 hover:border-indigo-500 hover:py-2 ">My Cart</span>
               </NavLink>
             </li>
           </ul>
