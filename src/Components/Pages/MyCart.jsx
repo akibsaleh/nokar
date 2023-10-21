@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../Firebase/firebase.init';
 import { RiDeleteBin2Fill } from 'react-icons/ri';
+import toast from 'react-hot-toast';
 
 const MyCart = () => {
   const [uid, setuid] = useState(null);
@@ -12,7 +13,7 @@ const MyCart = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setuid(user.uid);
-        fetch(`http://localhost:5000/cart/${uid}`)
+        fetch(`https://nokar-shop-server.vercel.app/${uid}`)
           .then((res) => res.json())
           .then((data) => setCart(data));
       }
@@ -22,7 +23,7 @@ const MyCart = () => {
   const handleDelete = (id) => {
     console.log(id);
 
-    fetch(`http://localhost:5000/cart/${id}`, {
+    fetch(`https://nokar-shop-server.vercel.app/${id}`, {
       method: 'DELETE',
     })
       .then((res) => res.json())
@@ -31,6 +32,7 @@ const MyCart = () => {
         if (data.deletedCount > 0) {
           const remainingCartItem = cart.filter((item) => item._id !== id);
           setCart(remainingCartItem);
+          toast.success('Product Deleted from cart Successfully');
         }
       });
   };
