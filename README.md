@@ -1,13 +1,19 @@
-# Nokar Car Brand Shop Assignment Submission by Akib Saleh
+# Nokar - Online Car shop
 
-## Project Feature
+Live Link : https://nokar-akib-saleh.web.app/
 
-- Visitors will be able to browse all brands that Nokar Offer.
-- Visitors will be able to register using email and password
-- Visitors will be able to login using email and password
-- Visitors will be able to login using Google
-- Visitors will be able to Add to cart cars and see them in MyCart page
+This app allows users to create, manage and update products and checkout order.
 
-### Visit the Client live [Link to the Client](https://nokar-akib-saleh.web.app)
+## Features:
+1. Ability to browse all brands that Nokar Offer.
+2. Create account and access restricted features.
+3. Create and publish product listing
+4. Ability to login using Google
+5. Ability to Add to cart cars and see them in MyCart page
 
-### Visit the Server live [Link to the Server](https://nokar-shop-server.vercel.app/)
+## Technologies used:
+1. React is used as the frontend library to develop the user interface
+2. React Router DOM is used to develop routing
+3. TailwindCSS is used to ensure scalability and modularity
+4. React Hook Form is used for advanced form management and error handling
+5. Firebase Authentication is used for authentication
